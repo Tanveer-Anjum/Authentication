@@ -85,7 +85,7 @@ app.post("/login", async (req,res)=>{
     try{
         const check = await collection.findOne({name:req.body.username});
         if(!check){
-            res.send("User Not found !");
+            res.send(" User Not found !");
         }
 
         //compare hash pasword with plane pasword in database
@@ -106,6 +106,11 @@ app.post("/login", async (req,res)=>{
 
     }
 })
+
+app.get("/",(req, res)=>{
+    res.render("login");
+
+});
 
 //for server running
 const port = 5000;
