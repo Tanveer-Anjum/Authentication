@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="form-Contanier">
+      <h2>Signup</h2>
+
+      <% if (message) { %>
+      <p class="wrong"><%= message %></p>
+      <% } %>
+
+      <form action="/signup" method="post">
+        <div class="form-group">
+          <label for="name" class="label1"> Name :</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            name="username"
+            required
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password" class="label1">Password : </label>
+          <input
+            type="text"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+            autocomplete="off"
+          />
+        </div>
+        <button type="submit" class="submit-btn">signup</button>
+      </form>
+      <div style="margin-top: 10px">
+        <a href="/"> Back</a>
+      </div>
+    </div>
+  </body>
+</html>
